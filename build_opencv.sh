@@ -102,6 +102,6 @@ main() {
   configure_build
   build_and_install
   cleanup_prompt
-  say "Done. Verify with: python3 -c 'import cv2; bi=cv2.getBuildInformation(); print("OpenCV", cv2.__version__, "| built_with_cuda=", ("YES" if "NVIDIA CUDA: YES" in bi else "NO"), "| cudnn=", ("YES" if "cuDNN: YES" in bi else "NO"), "| cuda_module=", ("YES" if hasattr(cv2,"cuda") else "NO"), "| cuda_devices=", (cv2.cuda.getCudaEnabledDeviceCount() if hasattr(cv2,"cuda") else 0))'"
+  echo "Done. Verify with: python3 -c 'import cv2; bi=cv2.getBuildInformation(); print("OpenCV", cv2.__version__, "| built_with_cuda=", ("YES" if "NVIDIA CUDA: YES" in bi else "NO"), "| cudnn=", ("YES" if "cuDNN: YES" in bi else "NO"), "| cuda_module=", ("YES" if hasattr(cv2,"cuda") else "NO"), "| cuda_devices=", (cv2.cuda.getCudaEnabledDeviceCount() if hasattr(cv2,"cuda") else 0))'"
 }
 main "$@"
